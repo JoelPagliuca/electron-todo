@@ -1,0 +1,23 @@
+{
+  "name": "electron-todo",
+  "version": "0.1.0",
+  "description": "A todo app made in Electron",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelPagliuca/electron-todo.git"
+  },
+  "author": "Joel Pagliuca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelPagliuca/electron-todo/issues"
+  },
+  "homepage": "https://github.com/JoelPagliuca/electron-todo#readme",
+  "devDependencies": {
+    "electron": "^2.0.2"
+  }
+}
