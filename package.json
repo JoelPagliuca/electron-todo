@@ -2,10 +2,11 @@
   "name": "electron-todo",
   "version": "0.1.0",
   "description": "A todo app made in Electron",
-  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "npm run build && electron ./dist/main.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/JoelPagliuca/electron-todo#readme",
   "devDependencies": {
-    "electron": "^2.0.2"
+    "electron": "^2.0.2",
+    "typescript": "^2.8.3"
   }
 }
