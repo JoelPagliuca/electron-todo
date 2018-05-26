@@ -1,8 +1,29 @@
 <div id="content" class="container">
-  <h1 class="title has-text-primary">Todo List</h1>
-  <div class="container">
-    Container
+  <div class="field">
+    <div class="control">
+      <input class="input is-primary" type="text" placeholder="Type a thing in">
+    </div>
   </div>
+  <div class="container columns">
+    <div class="column is-one-quarter"></div>
+
+    <div class="column is-half">
+      <nav class="panel">
+        <p class="panel-heading">
+          Things I have to do
+        </p>
+        <a id="123" class="panel-block todo-item todo-done">
+          <p><span>Todo item 1</span><span class="has-text-right">x</span></p>
+        </a>
+        <a class="panel-block todo-item">
+          <p>Todo item 2 <span class="is-pulled-right">x</span></p>
+        </a>
+      </nav>
+    </div>
+
+    <div class="column is-one-quarter"></div>
+  </div>
+
   <script>
     require('./dist/todo/todo.js')
   </script>
