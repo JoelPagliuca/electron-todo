@@ -3,17 +3,19 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+
       <link rel="stylesheet" href="node_modules/bulma/css/bulma.min.css">
-      <title>Hello Bulma!</title>
+
+      <link rel="import" href="src/todo/todo.html">
+      <title>Todo App</title>
     </head>
     <body>
-      <section class="section">
-        <h1 class="title">Hello Bulma!</h1>
-        <p class="subtle">
-          We are using node <script>document.write(process.versions.node)</script>,
-          Chrome <script>document.write(process.versions.chrome)</script>,
-          and Electron <script>document.write(process.versions.electron)</script>.
-        </p>
+      <section id="content">
+        <!-- imported content will go here -->
       </section>
+    
+      <script>
+        require('./dist/imports')
+      </script>
     </body>
   </html>
