@@ -20,9 +20,11 @@
   "homepage": "https://github.com/JoelPagliuca/electron-todo#readme",
   "devDependencies": {
     "electron": "^2.0.2",
+    "electron-rebuild": "^1.7.3",
     "typescript": "^2.8.3"
   },
   "dependencies": {
-    "bulma": "^0.7.1"
+    "bulma": "^0.7.1",
+    "sqlite3": "^4.0.0"
   }
 }
