@@ -1,6 +1,7 @@
-import { app, BrowserWindow } from "electron";
+import { app, BrowserWindow, ipcMain } from "electron";
 import * as path from "path";
 import * as url from "url";
+import * as list from "./main/list";
 
 let mainWindow: BrowserWindow;
 
@@ -26,6 +27,11 @@ function createWindow() {
     mainWindow = null;
   });
 }
+
+ipcMain.on("load-file", (event: Electron.Event, args: any) => {
+  let data = list.loadList();
+  console.log("loaded data: " + data.toString());
+});
 
 app.on("ready", createWindow);
 
