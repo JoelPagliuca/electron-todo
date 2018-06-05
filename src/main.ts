@@ -30,7 +30,8 @@ function createWindow() {
 
 ipcMain.on("load-file", (event: Electron.Event, args: any) => {
   let data = list.loadList();
-  console.log("loaded data: " + data.toString());
+  console.log("loaded data");
+  event.returnValue = data.toString();
 });
 
 app.on("ready", createWindow);

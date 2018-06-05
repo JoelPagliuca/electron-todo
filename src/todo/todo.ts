@@ -6,4 +6,9 @@ function markDone(todoId:string) {
 	todoItem.classList.toggle('has-text-success');
 }
 
-ipcRenderer.sendSync("load-file");
+let todoList: string
+
+todoList = ipcRenderer.sendSync("load-file");
+
+let todoItems = todoList.split(',');
+console.log(todoItems);
