@@ -10,8 +10,8 @@ let mainWindow: BrowserWindow;
  */
 function createWindow() {
   mainWindow = new BrowserWindow({
-    height: 600,
-    width: 800,
+    height: 800,
+    width: 1200,
   });
   
   mainWindow.loadURL(url.format({
