@@ -46,8 +46,18 @@ function getInitialList() {
   todoItems.forEach((item: TodoItem) => {
     todoPanel.appendChild(item.toNode());
   });
-
+  
   setOnClickListeners();
 }
 
+function addTodo() {
+  const newTodo = (<HTMLInputElement>document.getElementById('txtNewTodo')).value;
+  console.log(newTodo);
+  ipcRenderer.send("new-todo", newTodo);
+  let todoItem = new TodoItem(newTodo);
+  let todoPanel = document.getElementById('todo-panel');
+  todoPanel.appendChild(todoItem.toNode());
+}
+
 getInitialList();
+document.getElementById("btnNewTodo").addEventListener("click", addTodo);

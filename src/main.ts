@@ -1,7 +1,7 @@
 import { app, BrowserWindow, ipcMain } from "electron";
 import * as path from "path";
 import * as url from "url";
-import * as list from "./main/list";
+import * as List from "./main/list";
 
 let mainWindow: BrowserWindow;
 
@@ -29,8 +29,18 @@ function createWindow() {
 }
 
 ipcMain.on("load-file", (event: Electron.Event, args: any) => {
-  let data = list.loadList();
+  let data = List.loadList();
   event.returnValue = data.toString();
+});
+
+ipcMain.on("add-todo", (event: Electron.Event, args: any) => {
+  let data = List.loadList();
+  event.returnValue = data.toString();
+});
+
+ipcMain.on("new-todo", (event: Electron.Event, args: any) => {
+  let newTodo = args;
+  List.addItem(newTodo);
 });
 
 app.on("ready", createWindow);
